@@ -7,7 +7,7 @@ const PORT = 3000;
 
 // Setup EJS
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'templates'));
+app.set('views', path.join(__dirname, '../views/templates'));
 app.use(express.urlencoded({ extended: true }));
 
 // API Routes (tetap menggunakan backend yang ada)
@@ -57,3 +57,5 @@ app.post('/tambah', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Aplikasi berjalan di http://localhost:${PORT}`);
 });
+
+app.use('/', pengeluaranRoutes)

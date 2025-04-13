@@ -1,39 +1,18 @@
-<% layout('layout', { title: 'Data Pengeluaran' }) %>
-
-<h1>Manajemen Pengeluaran</h1>
-
-<% if (error) { %>
-  <div class="error"><%= error %></div>
-<% } %>
-
-<a href="/tambah" class="btn-tambah">+ Tambah Data</a>
-
 <table>
-  <thead>
-    <tr>
-      <th>No</th>
-      <th>Sumber</th>
-      <th>Jumlah</th>
-      <th>Kategori</th>
-      <th>Tanggal</th>
-      <th>Dibuat</th>
-    </tr>
-  </thead>
   <tbody>
     <% if (pengeluaran.length > 0) { %>
       <% pengeluaran.forEach((item, index) => { %>
         <tr>
           <td><%= index + 1 %></td>
           <td><%= item.sumber %></td>
-          <td><%= format.rupiah(item.jumlah) %></td>
+          <td><%= format.rupiah(item.jumlah) %></td>  <!-- Gunakan helper -->
           <td><%= item.kategori %></td>
           <td><%= format.tanggal(item.tanggal) %></td>
-          <td><%= format.tanggal(item.dibuatPada) %></td>
         </tr>
       <% }); %>
     <% } else { %>
       <tr>
-        <td colspan="6">Belum ada data</td>
+        <td colspan="5">Belum ada data</td>
       </tr>
     <% } %>
   </tbody>
