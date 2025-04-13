@@ -1,25 +1,26 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
 <head>
   <title><%= title %></title>
   <style>
     body { font-family: Arial; margin: 20px; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: 8px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
     th { background-color: #f2f2f2; }
-    .form-group { margin-bottom: 10px; }
+    .form-group { margin-bottom: 15px; }
     .nav { margin-bottom: 20px; }
+    .error { color: red; }
   </style>
 </head>
 <body>
   <div class="nav">
-    <a href="/">Home</a> | 
-    <a href="/records">Data</a> | 
-    <a href="/add-record">Tambah Data!</a>
+    <a href="/">Dashboard</a> | 
+    <a href="/pengeluaran">Data Pengeluaran</a> | 
+    <a href="/pengeluaran/tambah">Tambah Data</a>
   </div>
 
   <h1><%= header %></h1>
   
-  <%- body %>  <!-- Konten halaman akan diisi di sini -->
+  <%- body %> <!-- Konten halaman -->
 </body>
 </html>
