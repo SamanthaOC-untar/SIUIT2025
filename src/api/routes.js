@@ -1,13 +1,15 @@
-const express = require('express');
+const express = require("express");
 
-const books = require('./components/books/books-route');
-const users = require('./components/users/users-route');
+// Sesuaikan nama variabel import dengan file route pengeluaran
+const pengeluaranRoutes = require("./components/pengeluaran/pengeluaran-route");
+const userRoutes = require("./components/users/users-route");
 
 module.exports = () => {
   const app = express.Router();
 
-  books(app);
-  users(app);
+  // Panggil fungsi route dengan benar
+  pengeluaranRoutes(app); // Menggunakan variabel `pengeluaranRoutes`
+  userRoutes(app);
 
   return app;
 };
