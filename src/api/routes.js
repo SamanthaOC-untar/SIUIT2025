@@ -7,7 +7,6 @@ const pendapatanRoutes = require('./components/pendapatan/pendapatan-route');
 const cicilanRoutes = require('./components/cicilan/cicilan-route');
 const tagihanRoutes = require('./components/tagihan/tagihan-route'); 
 
-
 module.exports = () => {
   const app = express.Router();
 
