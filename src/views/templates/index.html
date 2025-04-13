@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manajemen Pengeluaran</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Data Pengeluaran</h1>
+      <nav>
+        <a href="index.html" class="active">Data</a>
+        <a href="tambah.html">Tambah Data</a>
+      </nav>
+    </header>
+
+    <div class="filter-section">
+      <select id="filterKategori">
+        <option value="">Semua Kategori</option>
+        <option value="operasional">Operasional</option>
+        <option value="gaji">Gaji</option>
+      </select>
+      <button id="btnFilter">Filter</button>
+    </div>
+
+    <div class="table-container">
+      <table id="tabelPengeluaran">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Sumber</th>
+            <th>Jumlah</th>
+            <th>Kategori</th>
+            <th>Tanggal</th>
+          </tr>
+        </thead>
+        <tbody id="dataBody">
+          <!-- Data akan diisi oleh JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
