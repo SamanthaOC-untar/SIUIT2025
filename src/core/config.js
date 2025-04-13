@@ -13,7 +13,7 @@ if (envFound.error) {
 module.exports = {
   env: process.env.NODE_ENV,
   api: {
-    prefix: '/api',
+    prefix: '/api/v1',
   },
   port: process.env.PORT || 3000,
   database: {

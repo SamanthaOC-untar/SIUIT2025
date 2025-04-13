@@ -30,7 +30,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(pinoHTTP({ logger }));
 
 // API routes
+console.log('API Prefix:', config.api.prefix);
 app.use(`${config.api.prefix}`, routes());
+
+app.get('/', (req,res) => {
+  res.send('Welcome to the API!')
+})
 
 // Handle 404 route
 app.use((request, response, next) =>
